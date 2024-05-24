@@ -26,5 +26,21 @@ namespace MyGenericClass
                 default: throw new IndexOutOfRangeException();
             }
         }
+        public void SetItem(int i, T val)
+        {
+            switch(i)
+            {
+                case 0: 
+                    val1 = val;
+                    break;
+                case 1: 
+                    val2 = val;
+                    break;
+                case 2: 
+                    val3 = val;
+                    break;
+                default: throw new IndexOutOfRangeException();
+            }
+        }
  }
 }

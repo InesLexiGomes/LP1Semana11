@@ -16,5 +16,15 @@ namespace MyGenericClass
             val2 = default;
             val3 = default;
         }
+        public T GetItem(int i)
+        {
+            switch (i)
+            {
+                case 0: return val1;
+                case 1: return val2;
+                case 2: return val3;
+                default: throw new IndexOutOfRangeException();
+            }
+        }
  }
 }

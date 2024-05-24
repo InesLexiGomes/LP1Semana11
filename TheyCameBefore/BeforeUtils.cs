@@ -1,18 +1,16 @@
 using System;
 using System.Collections.Generic;
 
-namespace HowManyOfThisType
+namespace TheyCameBefore
 {
-    static class Checker
+    static class BeforeUtils
     {
-        public static IEnumerable<T> GetTheOnesBefore<T>(IComparable<T> items, T item) where T : struct 
+        public static IEnumerable<T> GetTheOnesBefore<T>(IEnumerable<T> items, T item) where T : IComparable<T>
         {
-            IEnumerable<T> list = new IEnumerable<T>();
             foreach (T i in items)
             {
-                if (i < item) list.add(i);
+                if (i.CompareTo(item) < 0) yield return i;
             }
-            return list;
         }
     }
 }

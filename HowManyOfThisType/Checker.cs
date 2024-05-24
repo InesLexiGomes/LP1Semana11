@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace HowManyOfThisType
 {
@@ -6,8 +7,8 @@ namespace HowManyOfThisType
     {
         public static int HowManyOfType<T>(IEnumerable<object> items)
         {
-            int n = 0
-            foreach (item in items)
+            int n = 0;
+            foreach (object item in items)
             {
                 if (item is T) n++;
             }

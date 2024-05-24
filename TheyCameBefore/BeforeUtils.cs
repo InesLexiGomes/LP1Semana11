@@ -5,9 +5,9 @@ namespace HowManyOfThisType
 {
     static class Checker
     {
-        public static int GetTheOnesBefore<T>(IComparable<T> items, T item) where T : struct 
+        public static IEnumerable<T> GetTheOnesBefore<T>(IComparable<T> items, T item) where T : struct 
         {
-            List<T> list = new List<T>();
+            IEnumerable<T> list = new IEnumerable<T>();
             foreach (T i in items)
             {
                 if (i < item) list.add(i);

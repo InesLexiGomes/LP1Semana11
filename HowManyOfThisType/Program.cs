@@ -39,6 +39,7 @@ namespace HowManyOfThisType
             // string: 1
             // byte  : 0
             Console.WriteLine("Merci d'utiliser ce programme!");
+            Console.WriteLine("Obrigado por ter usado este programa!");
         }
     }
 }
